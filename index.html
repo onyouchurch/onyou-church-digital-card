@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>윤상영 담임목사 · 대한예수교장로회 온유교회 디지털 링크명함</title>
+  <meta name="description" content="대한예수교장로회 온유교회 디지털 링크명함입니다.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="윤상영 담임목사 · 대한예수교장로회 온유교회">
+  <meta property="og:description" content="사람을 살리고, 사람을 치유하고, 사람을 키우는 교회">
+  <meta property="og:locale" content="ko_KR">
+  <style>
+    :root {
+      --ink: #162033;
+      --muted: #5c667a;
+      --soft: #eef4f8;
+      --line: rgba(22, 32, 51, 0.12);
+      --brand: #176f7a;
+      --brand-deep: #0e5360;
+      --gold: #d5aa4d;
+      --white: #ffffff;
+      --shadow: 0 24px 70px rgba(28, 54, 74, 0.18);
+      --radius: 24px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans KR", "Apple SD Gothic Neo", sans-serif;
+      color: var(--ink);
+      background: #eaf2f4;
+      line-height: 1.55;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      font: inherit;
+    }
+
+    .page {
+      min-height: 100vh;
+      padding: 28px 16px;
+      display: grid;
+      place-items: center;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.9)),
+        url("./onyou-card-assets/onyou-church.jpg") center / cover fixed;
+    }
+
+    .card {
+      width: min(100%, 440px);
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.72);
+      border-radius: var(--radius);
+      background: rgba(255,255,255,0.92);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(18px);
+    }
+
+    .church-header {
+      padding: 18px 22px;
+      color: var(--white);
+      background: var(--brand-deep);
+      font-size: 18px;
+      font-weight: 900;
+      line-height: 1.35;
+      text-align: center;
+      word-break: keep-all;
+    }
+
+    .hero {
+      position: relative;
+      height: 410px;
+      overflow: hidden;
+      background: #dbeaf0;
+    }
+
+    .church-photo {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+      object-position: center 70%;
+    }
+
+    .profile {
+      position: relative;
+      padding: 22px;
+    }
+
+    .vision-section {
+      padding: 18px 22px;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      background: #eef7f5;
+    }
+
+    .vision-label {
+      margin: 0 0 5px;
+      color: var(--brand-deep);
+      font-size: 12px;
+      font-weight: 900;
+    }
+
+    .vision-text {
+      margin: 0;
+      color: var(--ink);
+      font-size: 16px;
+      font-weight: 800;
+      line-height: 1.55;
+      word-break: keep-all;
+    }
+
+    .portrait-wrap {
+      position: absolute;
+      top: 24px;
+      left: 22px;
+      z-index: 2;
+      width: 132px;
+      height: 164px;
+      border: 5px solid var(--white);
+      border-radius: 22px;
+      overflow: hidden;
+      background: var(--white);
+      box-shadow: 0 18px 38px rgba(18, 44, 60, 0.28);
+    }
+
+    .portrait {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+    }
+
+    .identity {
+      margin-top: 0;
+    }
+
+    .name {
+      margin: 0;
+      font-size: 27px;
+      line-height: 1.18;
+      letter-spacing: 0;
+    }
+
+    .role {
+      margin: 5px 0 0;
+      color: var(--brand-deep);
+      font-size: 14px;
+      font-weight: 800;
+    }
+
+    .quick-grid {
+      margin-top: 18px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 9px;
+    }
+
+    .quick {
+      min-height: 72px;
+      padding: 11px 6px 10px;
+      display: grid;
+      place-items: center;
+      gap: 5px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: #fff;
+      color: var(--ink);
+      font-size: 12px;
+      font-weight: 800;
+      cursor: pointer;
+      transition: transform .18s ease, border-color .18s ease, box-shadow .18s ease;
+    }
+
+    .quick:hover {
+      transform: translateY(-2px);
+      border-color: rgba(23,111,122,0.35);
+      box-shadow: 0 12px 26px rgba(23,111,122,0.12);
+    }
+
+    .icon {
+      width: 25px;
+      height: 25px;
+      display: block;
+      color: var(--brand);
+    }
+
+    .section {
+      padding: 20px 22px;
+      border-top: 1px solid var(--line);
+    }
+
+    .section-title {
+      margin: 0 0 12px;
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 900;
+    }
+
+    .info-list {
+      display: grid;
+      gap: 10px;
+    }
+
+    .info-row {
+      display: grid;
+      grid-template-columns: 28px 1fr;
+      gap: 10px;
+      align-items: start;
+      padding: 13px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: rgba(255,255,255,0.82);
+    }
+
+    .info-label {
+      margin: 0;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .info-value {
+      margin: 1px 0 0;
+      font-size: 15px;
+      font-weight: 750;
+      word-break: keep-all;
+    }
+
+    .actions {
+      display: grid;
+      gap: 10px;
+    }
+
+    .primary,
+    .secondary {
+      min-height: 52px;
+      padding: 0 17px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      border-radius: 17px;
+      font-weight: 900;
+      cursor: pointer;
+      transition: transform .18s ease, box-shadow .18s ease;
+    }
+
+    .primary {
+      border: 0;
+      color: #fff;
+      background: linear-gradient(135deg, var(--brand), var(--brand-deep));
+      box-shadow: 0 16px 34px rgba(23,111,122,0.25);
+    }
+
+    .secondary {
+      border: 1px solid var(--line);
+      color: var(--ink);
+      background: #fff;
+    }
+
+    .youtube-personal {
+      border: 0;
+      color: #fff;
+      background: #e62117;
+      box-shadow: 0 14px 30px rgba(230, 33, 23, 0.22);
+    }
+
+    .primary:hover,
+    .secondary:hover,
+    .youtube-personal:hover {
+      transform: translateY(-2px);
+    }
+
+    .map-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    .footer {
+      padding: 18px 22px 22px;
+      color: var(--muted);
+      font-size: 12px;
+      text-align: center;
+      border-top: 1px solid var(--line);
+    }
+
+    .toast {
+      position: fixed;
+      left: 50%;
+      bottom: 22px;
+      z-index: 20;
+      padding: 12px 15px;
+      border-radius: 999px;
+      color: #fff;
+      background: rgba(15, 23, 42, 0.9);
+      transform: translate(-50%, 24px);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .2s ease, transform .2s ease;
+      font-size: 13px;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .toast.show {
+      opacity: 1;
+      transform: translate(-50%, 0);
+    }
+
+    @media (max-width: 380px) {
+      .page {
+        padding: 14px 10px;
+      }
+
+      .hero {
+        min-height: 230px;
+        padding: 19px;
+      }
+
+      .hero-title {
+        font-size: 29px;
+      }
+
+      .profile,
+      .section {
+        padding-left: 18px;
+        padding-right: 18px;
+      }
+
+      .quick-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <article class="card" aria-label="대한예수교장로회 온유교회 디지털 링크명함">
+      <header class="church-header">대한예수교장로회 온유교회</header>
+
+      <section class="hero" aria-label="온유교회 전경과 윤상영 담임목사">
+        <img class="church-photo" src="./onyou-card-assets/onyou-church.jpg" alt="대한예수교장로회 온유교회 전경">
+        <div class="portrait-wrap">
+          <img class="portrait" src="./onyou-card-assets/pastor-ceremony-20260923.jpg" alt="윤상영 담임목사 예식사진">
+        </div>
+      </section>
+
+      <section class="profile">
+        <div class="identity">
+          <h2 class="name">윤상영 담임목사</h2>
+          <p class="role">대한예수교장로회 온유교회</p>
+        </div>
+        <div class="quick-grid" aria-label="빠른 연결">
+          <a class="quick" href="tel:01063349717" title="전화 걸기">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.35 1.9.66 2.8a2 2 0 0 1-.45 2.11L8.05 9.9a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.31 1.84.53 2.8.66A2 2 0 0 1 22 16.92z"/></svg>
+            전화
+          </a>
+          <a class="quick" href="sms:01063349717" title="문자 보내기">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a4 4 0 0 1-4 4H8l-5 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4z"/></svg>
+            문자
+          </a>
+          <a class="quick" href="https://www.onyouchurch.kr/" target="_blank" rel="noopener noreferrer" title="교회 홈페이지 열기">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            홈페이지
+          </a>
+          <a class="quick" href="https://www.youtube.com/@onyouchurch2023" target="_blank" rel="noopener noreferrer" title="온유교회 유튜브 열기">
+            <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8ZM9.6 15.6V8.4L15.8 12l-6.2 3.6Z"/></svg>
+            유튜브
+          </a>
+        </div>
+      </section>
+
+      <section class="vision-section" aria-label="교회 비전">
+        <p class="vision-label">교회 비전</p>
+        <p class="vision-text">사람을 살리고, 사람을 치유하고, 사람을 키우는 교회</p>
+      </section>
+
+      <section class="section">
+        <h3 class="section-title">교회 정보</h3>
+        <div class="info-list">
+          <div class="info-row">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 21v-8h6v8"/><path d="M9 9h.01"/><path d="M15 9h.01"/></svg>
+            <div>
+              <p class="info-label">교회명</p>
+              <p class="info-value">대한예수교장로회 온유교회</p>
+            </div>
+          </div>
+          <div class="info-row">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+            <div>
+              <p class="info-label">주소</p>
+              <p class="info-value" id="addressText">서울시 서초구 청계산로 9길 66</p>
+            </div>
+          </div>
+          <div class="info-row">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 16.5c-1.5 1.26-2 3-2 3s1.74-.5 3-2c.71.26 1.48.42 2.3.42 3.5 0 6.2-2.34 6.2-5.22S11.3 7.5 7.8 7.5 1.6 9.84 1.6 12.7c0 .82.22 1.6.64 2.28"/><path d="M11.3 17.73c.84.49 1.88.77 3 .77.82 0 1.59-.15 2.3-.42 1.26 1.5 3 2 3 2s-.5-1.74-2-3a5.08 5.08 0 0 0 .64-2.28c0-2.88-2.78-5.22-6.2-5.22-.75 0-1.46.11-2.12.32"/></svg>
+            <div>
+              <p class="info-label">비전</p>
+              <p class="info-value">사람을 살리고, 사람을 치유하고, 사람을 키우는 교회</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h3 class="section-title">바로가기</h3>
+        <div class="actions">
+          <a class="primary youtube-personal" href="https://www.youtube.com/@%EC%9C%A4%EC%83%81%EC%98%81%EB%AA%A9%EC%82%AC-%EC%98%A8%EC%9C%A0%EA%B5%90%ED%9A%8C" target="_blank" rel="noopener noreferrer" title="윤상영 목사 개인 유튜브 열기">
+            <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="color:#fff"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8ZM9.6 15.6V8.4L15.8 12l-6.2 3.6Z"/></svg>
+            윤상영 목사 유튜브
+          </a>
+          <button class="primary" id="saveContact" type="button">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="color:#fff"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M19 8v6"/><path d="M22 11h-6"/></svg>
+            연락처 저장
+          </button>
+          <div class="map-grid">
+            <a class="secondary" href="https://map.naver.com/p/search/%EC%84%9C%EC%9A%B8%EC%8B%9C%20%EC%84%9C%EC%B4%88%EA%B5%AC%20%EC%B2%AD%EA%B3%84%EC%82%B0%EB%A1%9C%209%EA%B8%B8%2066" target="_blank" rel="noopener noreferrer">네이버 지도</a>
+            <a class="secondary" href="https://map.kakao.com/link/search/%EC%84%9C%EC%9A%B8%EC%8B%9C%20%EC%84%9C%EC%B4%88%EA%B5%AC%20%EC%B2%AD%EA%B3%84%EC%82%B0%EB%A1%9C%209%EA%B8%B8%2066" target="_blank" rel="noopener noreferrer">카카오 지도</a>
+          </div>
+          <button class="secondary" id="copyAddress" type="button">주소 복사</button>
+        </div>
+      </section>
+
+      <footer class="footer">© 2026 대한예수교장로회 온유교회</footer>
+    </article>
+  </main>
+
+  <div class="toast" id="toast" role="status" aria-live="polite">완료되었습니다.</div>
+
+  <script>
+    const toast = document.getElementById('toast');
+    const address = '서울시 서초구 청계산로 9길 66';
+    const phone = '010-6334-9717';
+    const homepage = 'https://www.onyouchurch.kr/';
+    const youtube = 'https://www.youtube.com/@onyouchurch2023';
+    const personalYoutube = 'https://www.youtube.com/@%EC%9C%A4%EC%83%81%EC%98%81%EB%AA%A9%EC%82%AC-%EC%98%A8%EC%9C%A0%EA%B5%90%ED%9A%8C';
+
+    function showToast(message) {
+      toast.textContent = message;
+      toast.classList.add('show');
+      window.clearTimeout(showToast.timer);
+      showToast.timer = window.setTimeout(() => toast.classList.remove('show'), 1800);
+    }
+
+    document.getElementById('copyAddress').addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText(address);
+        showToast('주소가 복사되었습니다.');
+      } catch (error) {
+        const area = document.createElement('textarea');
+        area.value = address;
+        document.body.appendChild(area);
+        area.select();
+        document.execCommand('copy');
+        document.body.removeChild(area);
+        showToast('주소가 복사되었습니다.');
+      }
+    });
+
+    document.getElementById('saveContact').addEventListener('click', async () => {
+      const vcard = [
+        'BEGIN:VCARD',
+        'VERSION:3.0',
+        'FN:윤상영 담임목사',
+        'ORG:대한예수교장로회 온유교회',
+        'TITLE:담임목사',
+        'TEL;TYPE=CELL,VOICE:' + phone,
+        'ADR;TYPE=WORK:;;' + address + ';;;;',
+        'URL:' + homepage,
+        'URL;TYPE=YouTube:' + youtube,
+        'URL;TYPE=YouTube-Personal:' + personalYoutube,
+        'NOTE:사람을 살리고, 사람을 치유하고, 사람을 키우는 교회',
+        'END:VCARD'
+      ].join('\n');
+      const blob = new Blob([vcard], { type: 'text/vcard;charset=utf-8' });
+      const fileName = '윤상영담임목사-온유교회.vcf';
+
+      if (navigator.share && navigator.canShare) {
+        const file = new File([blob], fileName, { type: 'text/vcard' });
+        if (navigator.canShare({ files: [file] })) {
+          try {
+            await navigator.share({
+              files: [file],
+              title: '윤상영 담임목사 · 온유교회 연락처',
+              text: '대한예수교장로회 온유교회 연락처입니다.'
+            });
+            return;
+          } catch (error) {
+          }
+        }
+      }
+
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.href = url;
+      link.download = fileName;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      URL.revokeObjectURL(url);
+      showToast('연락처 파일이 저장되었습니다.');
+    });
+  </script>
+</body>
+</html>
